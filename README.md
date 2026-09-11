@@ -1,57 +1,60 @@
 <p align="center">
-  <img height="200px" width="200px" border_radius="10" src="https://github.com/user-attachments/assets/f1e593d5-194d-4e3d-8bc5-2a37b6e673dc" alt="ESP32 Development Board Banner" width="900">
+  <img height="200px" width="200px" src="https://github.com/user-attachments/assets/f1e593d5-194d-4e3d-8bc5-2a37b6e673dc" alt="ESP32 Development Board">
 </p>
 
 <h1 align="center">ESP32 Development Board with 10 Onboard LEDs</h1>
 
 <p align="center">
-A compact, beginner-friendly ESP32 development board designed for learning, prototyping, robotics, and IoT applications.
+A custom ESP32 development board that I designed for learning, robotics, and IoT projects.
 </p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/ESP32-WROOM-blue">
-<img src="https://img.shields.io/badge/Platform-Arduino_IDE-green">
-<img src="https://img.shields.io/badge/Platform-PlatformIO-orange">
+<img src="https://img.shields.io/badge/Arduino-IDE-green">
+<img src="https://img.shields.io/badge/PlatformIO-Supported-orange">
 <img src="https://img.shields.io/badge/License-MIT-red">
 </p>
 
 ---
 
-# Overview
+# About the Project
 
-This project is a custom ESP32 development board built with simplicity and usability in mind.
+This is my first custom ESP32 development board.
 
-Unlike most ESP32 development boards that only include a single onboard LED, this board features **10 programmable LEDs**, making it much easier for beginners to learn GPIO programming without needing external components.
+I wanted to build a board that would be easier for beginners to use. Most ESP32 boards only have one onboard LED, so every time you want to test another GPIO pin you need extra LEDs and jumper wires.
 
-The board also includes a dedicated LED strip connector, making it suitable for lighting projects, robotics, and IoT applications.
+To solve that, I designed a board with **10 programmable LEDs** already connected to different GPIO pins. This lets you test outputs, learn programming, and build simple LED projects without needing a breadboard.
 
-Whether you're a student, hobbyist, or developer, this board provides an easy way to prototype and experiment with the ESP32.
+I also added a connector for an external LED strip so the board can be used in robotics and IoT projects.
+
+Building this PCB taught me a lot about schematic design, PCB routing, component placement, and fixing design mistakes.
 
 ---
 
-# ESP32 Consist of
+# Features
 
 - ESP32-WROOM Module
-- 10 User Programmable LEDs
+- 10 Programmable LEDs
 - USB Programming
 - Reset Button
 - Boot Button
-- Power Indicator LED
-- GPIO Breakout Headers
-- Compatible with Arduino IDE
-- Compatible with PlatformIO
-- Compatible with ESP-IDF
+- Power LED
+- GPIO Headers
+- LED Strip Connector
+- Arduino IDE Support
+- PlatformIO Support
+- ESP-IDF Compatible
 
 ---
 
 # 3D Preview
 
 <p align="center">
-<img width="1212" height="767" alt="Screenshot 2026-09-07 231923" src="https://github.com/user-attachments/assets/abaeb616-f0f3-45f5-b96d-031a3cc3a582" />
+<img src="https://github.com/user-attachments/assets/abaeb616-f0f3-45f5-b96d-031a3cc3a582" width="900">
 </p>
 
 <p align="center">
-Front 3D View
+Final 3D PCB Design
 </p>
 
 ---
@@ -59,8 +62,7 @@ Front 3D View
 # PCB Layout
 
 <p align="center">
-<img width="1540" height="848" alt="Screenshot 2026-09-07 231726" src="https://github.com/user-attachments/assets/a1800b0e-4fd4-46e8-8716-6dd12154bbf7" />
-
+<img src="https://github.com/user-attachments/assets/a1800b0e-4fd4-46e8-8716-6dd12154bbf7">
 </p>
 
 ---
@@ -68,46 +70,48 @@ Front 3D View
 # Schematic
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/689ea426-b35a-4166-972f-a27f59292df6" width="950">
+<img src="https://github.com/user-attachments/assets/689ea426-b35a-4166-972f-a27f59292df6" width="900">
 </p>
 
 ---
 
-# BOM
- build of material file is in inside the esp32 file 
+# Bill of Materials
 
+The complete BOM is available in the **ESP32** folder of this repository.
 
-# Why 10 Onboard LEDs?
+---
 
-Most ESP32 boards include only one LED.
+# Why 10 LEDs?
 
-This board integrates ten programmable LEDs directly onto the PCB, allowing users to:
+I added 10 onboard LEDs because I wanted this board to be easier for beginners.
 
-- Learn GPIO programming
-- Test outputs instantly
-- Build LED animations
-- Create binary counters
-- Experiment without breadboards
-- Reduce external wiring
+Instead of connecting LEDs with jumper wires every time, you can start testing GPIO pins immediately.
 
-This makes the board especially useful for beginners and classroom environments.
+Some fun things you can try:
 
+- LED blinking
+- GPIO testing
+- Running light effects
+- Binary counters
+- LED animations
+- Learning arrays and loops
+- Classroom demonstrations
+
+---
 
 # Getting Started
 
 ## Arduino IDE
 
-1. Install the ESP32 Board Package.
-2. Connect the board via USB.
-3. Select the correct COM Port.
+1. Install the ESP32 board package.
+2. Connect the board using USB.
+3. Select the correct COM port.
 4. Choose **ESP32 Dev Module**.
-5. Upload your code.
+5. Upload your sketch.
 
 ---
 
 ## PlatformIO
-
-Example `platformio.ini`
 
 ```ini
 [env:esp32dev]
@@ -119,76 +123,86 @@ monitor_speed = 115200
 
 ---
 
-# Example Code
+# Example
 
 ```cpp
 const int leds[] = {2,4,5,12,13,14,15,18,19,21};
 
 void setup()
 {
-    for(int i=0;i<10;i++)
+    for(int i = 0; i < 10; i++)
         pinMode(leds[i], OUTPUT);
 }
 
 void loop()
 {
-    for(int i=0;i<10;i++)
+    for(int i = 0; i < 10; i++)
     {
         digitalWrite(leds[i], HIGH);
         delay(120);
-
         digitalWrite(leds[i], LOW);
     }
 }
 ```
-# Design Considerations
-
-During the PCB design process, the focus was on creating a compact, clean, and beginner-friendly layout. Components were arranged to minimize routing complexity while keeping all important GPIOs easily accessible.
-
-The board was designed by following Espressif's official hardware recommendations to ensure reliable operation and good PCB design practices.
 
 ---
 
+# What I Learned
+
+This project helped me understand:
+
+- Reading ESP32 reference schematics
+- PCB routing
+- USB connections
+- Power supply design
+- Component placement
+- Fixing PCB design errors
+- Designing a compact board
+
+I had to redesign the PCB layout several times before everything routed correctly, but I learned something new from every version.
+
+---
+
+# Manufacturing
+
+The PCB was checked using JLCPCB's online manufacturing service to make sure it can be fabricated and assembled.
+
+The manufacturing cost is included in **BOM.md**.
+
+---
 
 # References
 
-The schematic and PCB layout were designed with guidance from Espressif's official documentation.
+I used Espressif's official documentation while designing this board.
 
-- ESP32 Hardware Design Guidelines  
-  https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/
-
-- ESP32 Schematic Checklist  
-  https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html
+- ESP32 Hardware Design Guidelines
+- ESP32 Schematic Checklist
 
 ---
 
----
+# Future Plans
 
-# Contributing
+Some improvements I'd like to make in the next version:
 
-Contributions are welcome! If you find a bug, have a suggestion, or want to improve this project, feel free to open an issue or submit a pull request.
+- USB-C connector
+- More GPIO breakout pins
+- Better silkscreen labels
+- Battery charging support
+- Smaller PCB size
 
 ---
 
 # Contact
 
-**Sugam Pathak (Sangam)**
+**Sugam Pathak**
 
-📧 Email: pathaksugam46@gmail.com
+pathaksugam46@gmail.com
 
-📱 Phone: +977 9766298480
+LinkedIn  
+https://www.linkedin.com/in/sugam-pathak-a2761b41a/
 
-💼 LinkedIn: https://www.linkedin.com/in/sugam-pathak-a2761b41a/
+Hack Club Slack  
+https://hackclub.enterprise.slack.com/team/U0A0ZST24CF
 
-💬 Hack Club Slack: https://hackclub.enterprise.slack.com/team/U0A0ZST24CF
 
-# License
-
-This project is licensed under the MIT License.
-
----
-
-# Author
-
-**Sugam Pathak(SANGAM)**
-MADE FOR HACK CLUB
+Made for Hack Club.
