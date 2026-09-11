@@ -46,6 +46,16 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 - ESP-IDF Compatible
 
 ---
+# Bill of Materials (BOM)
+
+## JLCPCB Manufacturing Quote
+
+| Item | Cost (USD) |
+|------|-----------:|
+| PCB Fabrication | $4.00 |
+| PCBA Assembly | $68.57 |
+| **Estimated Total Cost** | **$72.57** |
+
 
 # 3D Preview
 
@@ -158,41 +168,8 @@ This project helped me understand:
 - USB connections
 - Power supply design
 - Component placement
-- Fixing PCB design errors
-- Designing a compact board
-
-I had to redesign the PCB layout several times before everything routed correctly, but I learned something new from every version.
-
 ---
 
-# Manufacturing
-
-The PCB was checked using JLCPCB's online manufacturing service to make sure it can be fabricated and assembled.
-
-The manufacturing cost is included in **BOM.md**.
-
----
-
-# References
-
-I used Espressif's official documentation while designing this board.
-
-- ESP32 Hardware Design Guidelines
-- ESP32 Schematic Checklist
-
----
-
-# Future Plans
-
-Some improvements I'd like to make in the next version:
-
-- USB-C connector
-- More GPIO breakout pins
-- Better silkscreen labels
-- Battery charging support
-- Smaller PCB size
-
----
 
 # Contact
 
