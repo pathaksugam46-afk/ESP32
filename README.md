@@ -31,6 +31,22 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 
 ---
 
+## Project Structure
+
+```text
+ESP32/
+├── Gerber/
+│   ├── BOM_PCB.xlsx
+│   └── PickAndPlace (1).xlsx
+├── Source/
+│   └── ESP32_BORD4.epro2
+├── images/
+│   ├── 3D_PCB.step
+│   ├── SCH_Schematic.png
+│   └── esp.pdf
+└── README.md
+```
+
 # Features
 
 - ESP32-WROOM Module
