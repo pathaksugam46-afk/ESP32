@@ -31,21 +31,7 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 
 ---
 
-## Project Structure
 
-```text
-ESP32/
-├── Gerber/
-│   ├── BOM_PCB.xlsx
-│   └── PickAndPlace (1).xlsx
-├── Source/
-│   └── ESP32_BORD4.epro2
-├── images/
-│   ├── 3D_PCB.step
-│   ├── SCH_Schematic.png
-│   └── esp.pdf
-└── README.md
-```
 
 # Features
 
@@ -76,7 +62,7 @@ ESP32/
 # 3D Preview
 
 <p align="center">
-<img width="1070" height="675" alt="Screenshot 2026-09-17 215940" src="https://github.com/user-attachments/assets/6edde003-973d-4e47-96d7-6b45bd85b84c" />
+<img width="1332" height="656" alt="Screenshot 2026-09-23 221941" src="https://github.com/user-attachments/assets/842d8a07-ff7c-4d78-afed-6e2064e01767" />
 
 
 </p>
@@ -90,7 +76,7 @@ Final 3D PCB Design
 # PCB Layout
 
 <p align="center">
-<img width="1325" height="768" alt="Screenshot 2026-09-17 215432" src="https://github.com/user-attachments/assets/96e0d47f-cd57-4d3e-88a5-b6fa67679883" />
+<img width="1297" height="606" alt="Screenshot 2026-09-23 221923" src="https://github.com/user-attachments/assets/5b777bce-6678-4245-bb9a-307731209e89" />
 
 
 </p>
