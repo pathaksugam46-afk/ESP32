@@ -119,10 +119,23 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 - ESP-IDF *(Optional)*
 
 ---
-# 3D Preview
+# 3D Preview Front
 
 <p align="center">
 <img width="1311" height="677" alt="Screenshot 2026-09-30 183807" src="https://github.com/user-attachments/assets/855bf568-4987-48e3-adcf-c03e167db7df" />
+
+
+</p>
+
+<p align="center">
+Final 3D PCB Design
+</p>
+
+
+# 3D Preview Back
+
+<p align="center">
+<img width="1020" height="557" alt="Screenshot 2026-09-30 185404" src="https://github.com/user-attachments/assets/26ca2b71-296b-4697-bd27-8e67cd79478d" />
 
 
 </p>
