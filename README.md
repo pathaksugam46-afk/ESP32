@@ -48,9 +48,37 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 - ESP-IDF Compatible
 
 ---
+---
+
 # Bill of Materials (BOM)
 
-## JLCPCB Manufacturing Quote
+| Qty | Component | Manufacturer Part |
+|----:|-----------|-------------------|
+| 1 | ESP32-WROOM-32E Module | ESP32-WROOM-32E-N4 |
+| 1 | USB to UART IC | CP2102N-A02-GQFN28 |
+| 1 | 3.3V Voltage Regulator | AMS1117-3.3 |
+| 1 | USB-C Connector | 1050170001 |
+| 10 | 0402 LEDs | LED_0402-R |
+| 8 | 100nF Ceramic Capacitors | CL05B104KO5NNNC |
+| 2 | 22uF Ceramic Capacitors | CL21A226MAYNNNE |
+| 2 | 10uF Ceramic Capacitors | CL05A106MP5NUNC |
+| 1 | 4.7uF Ceramic Capacitor | CL05A475KP5NRNC |
+| 2 | SS8050 NPN Transistors | SS8050-G |
+| 2 | 2N7002 N-Channel MOSFETs | 2N7002T-7-F |
+| 2 | 1kΩ Resistors | 0805W8F1001T5E |
+| 7 | 10kΩ Resistors | 0402WGF1002TCE / 0805W8F1002T5E |
+| 2 | 0Ω Jumpers | 0402WGF0000TCE |
+| 3 | 22.1kΩ Resistors | 0402WGF2212TCE |
+| 1 | 47.5kΩ Resistor | RMC060347.5K1%N |
+| 2 | Push Buttons | PTS645SH50SMTR92LFS |
+| 3 | ESD Protection Diodes | LESD5D5.0CT1G |
+| 2 | Power Indicator LEDs | SM0805GC |
+| 2 | Pin Headers | X1311WV-17J-C40D24 |
+| 2 | Connectors | DZ127R-11-02-25, B-2101S03P-A110 |
+
+---
+
+# Manufacturing Cost
 
 | Item | Cost (USD) |
 |------|-----------:|
@@ -58,7 +86,39 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 | PCBA Assembly | $68.57 |
 | **Estimated Total Cost** | **$72.57** |
 
+---
 
+# Tools Required for PCB Assembly
+
+| Tool | Purpose |
+|------|---------|
+| Soldering Station | Solder through-hole and SMD components |
+| Hot Air Rework Station *(Recommended)* | Install and remove SMD ICs |
+| Solder Wire | Create electrical solder joints |
+| Solder Paste | Assemble SMD components |
+| Flux Paste | Improve solder flow and reduce oxidation |
+| Fine Tip Tweezers | Place small SMD components |
+| Digital Multimeter | Test continuity, voltage, and shorts |
+| PCB Holder / Helping Hands | Hold the PCB during assembly |
+| Desoldering Wick | Remove excess solder |
+| Solder Pump | Remove solder from through-hole components |
+| Side Cutter | Trim component leads |
+| Isopropyl Alcohol (IPA) | Clean flux residue |
+| Cotton Swabs / Cleaning Brush | PCB cleaning |
+| ESD Wrist Strap | Protect components from static electricity |
+| Magnifying Glass / Microscope | Inspect solder joints |
+| USB-C Cable | Program and power the board |
+
+---
+
+# Software Used
+
+- EasyEDA Pro
+- Arduino IDE
+- PlatformIO
+- ESP-IDF *(Optional)*
+
+---
 # 3D Preview
 
 <p align="center">
