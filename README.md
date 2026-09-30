@@ -62,7 +62,7 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 # 3D Preview
 
 <p align="center">
-<img width="1206" height="767" alt="Screenshot 2026-09-26 130935" src="https://github.com/user-attachments/assets/97c352d4-a9b2-40a2-b30c-aca5e1bf771a" />
+<img width="1311" height="677" alt="Screenshot 2026-09-30 183807" src="https://github.com/user-attachments/assets/855bf568-4987-48e3-adcf-c03e167db7df" />
 
 
 </p>
@@ -77,7 +77,7 @@ Final 3D PCB Design
 
 <p align="center">
 
-<img width="1062" height="553" alt="Screenshot 2026-09-26 130709" src="https://github.com/user-attachments/assets/d3998a81-96fb-458c-896d-cf39ac47809f" />
+<img width="860" height="460" alt="Screenshot 2026-09-30 182025" src="https://github.com/user-attachments/assets/1a3ca18c-9bf3-4fd5-b921-28100707ae69" />
 
 </p>
 
@@ -86,7 +86,7 @@ Final 3D PCB Design
 # 2D
 
 <p align="center">
-<img width="1006" height="530" alt="Screenshot 2026-09-26 130833" src="https://github.com/user-attachments/assets/e073772c-ac81-4a70-85e1-23ae90992377" />
+<img width="1217" height="617" alt="Screenshot 2026-09-30 184435" src="https://github.com/user-attachments/assets/e7c60683-7a5f-4c59-a69c-e7e6974fc4a9" />
 
 
 </p>
