@@ -23,11 +23,12 @@ This is my first custom ESP32 development board.
 
 I wanted to build a board that would be easier for beginners to use. Most ESP32 boards only have one onboard LED, so every time you want to test another GPIO pin you need extra LEDs and jumper wires.
 
-To solve that, I designed a board with **10 programmable LEDs** already connected to different GPIO pins. This lets you test outputs, learn programming, and build simple LED projects without needing a breadboard.
+To solve that, I designed a board with **10 programmable LEDs** already connected to different GPIO pins. **All 10 LEDs are mounted on the back side (bottom layer) of the PCB**, keeping the front side clean while still allowing easy testing and programming. This lets you test outputs, learn programming, and build simple LED projects without needing a breadboard.
 
 I also added a connector for an external LED strip so the board can be used in robotics and IoT projects.
 
 Building this PCB taught me a lot about schematic design, PCB routing, component placement, and fixing design mistakes.
+
 
 ---
 
@@ -50,31 +51,37 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 ---
 ---
 
-# Bill of Materials (BOM)
+##  Bill of Materials (BOM)
 
-| Qty | Component | Manufacturer Part |
-|----:|-----------|-------------------|
-| 1 | ESP32-WROOM-32E Module | ESP32-WROOM-32E-N4 |
-| 1 | USB to UART IC | CP2102N-A02-GQFN28 |
-| 1 | 3.3V Voltage Regulator | AMS1117-3.3 |
-| 1 | USB-C Connector | 1050170001 |
-| 10 | 0402 LEDs | LED_0402-R |
-| 8 | 100nF Ceramic Capacitors | CL05B104KO5NNNC |
-| 2 | 22uF Ceramic Capacitors | CL21A226MAYNNNE |
-| 2 | 10uF Ceramic Capacitors | CL05A106MP5NUNC |
-| 1 | 4.7uF Ceramic Capacitor | CL05A475KP5NRNC |
-| 2 | SS8050 NPN Transistors | SS8050-G |
-| 2 | 2N7002 N-Channel MOSFETs | 2N7002T-7-F |
-| 2 | 1kΩ Resistors | 0805W8F1001T5E |
-| 7 | 10kΩ Resistors | 0402WGF1002TCE / 0805W8F1002T5E |
-| 2 | 0Ω Jumpers | 0402WGF0000TCE |
-| 3 | 22.1kΩ Resistors | 0402WGF2212TCE |
-| 1 | 47.5kΩ Resistor | RMC060347.5K1%N |
-| 2 | Push Buttons | PTS645SH50SMTR92LFS |
-| 3 | ESD Protection Diodes | LESD5D5.0CT1G |
-| 2 | Power Indicator LEDs | SM0805GC |
-| 2 | Pin Headers | X1311WV-17J-C40D24 |
-| 2 | Connectors | DZ127R-11-02-25, B-2101S03P-A110 |
+| Qty | Component | Designator | LCSC Link | Unit Price (USD) | Total (USD) |
+|---:|---|---|---|---:|---:|
+| 8 | 100nF Capacitor | C1, C2, C5, C11, C12, C14, C15, C16 | https://www.lcsc.com/product-detail/C1525.html | $0.0007 | $0.0056 |
+| 2 | 22uF Capacitor | C3, C4 | https://www.lcsc.com/product-detail/C602037.html | $0.0252 | $0.0504 |
+| 1 | 4.7uF Capacitor | C7 | https://www.lcsc.com/product-detail/C368809.html | $0.0026 | $0.0026 |
+| 2 | 10uF Capacitor | C10, C13 | https://www.lcsc.com/product-detail/C315248.html | $0.0045 | $0.0090 |
+| 1 | 1×2 Pin Header (DZ127R-11-02-25) | H1 | https://www.lcsc.com/product-detail/C2935942.html | $0.0024 | $0.0024 |
+| 1 | Boot Switch (B-2101S03P-A110) | H2 | https://www.lcsc.com/product-detail/C124354.html | $0.0065 | $0.0065 |
+| 10 | 0402 Red LEDs | LED1–LED10 | — | — | — |
+| 2 | SS8050-G NPN Transistor | Q1, Q4 | https://www.lcsc.com/product-detail/C3199946.html | $0.0091 | $0.0182 |
+| 2 | 2N7002 MOSFET | Q2, Q3 | https://www.lcsc.com/product-detail/C139445.html | $0.0162 | $0.0324 |
+| 2 | 1kΩ Resistor | R1, R9 | https://www.lcsc.com/product-detail/C17513.html | $0.0007 | $0.0014 |
+| 5 | 10kΩ Resistor | R7, R8, R14, R15, R18 | https://www.lcsc.com/product-detail/C25744.html | $0.0006 | $0.0030 |
+| 2 | 10kΩ Precision Resistor | R10, R11 | https://www.lcsc.com/product-detail/C17414.html | $0.0005 | $0.0010 |
+| 2 | 0Ω Jumper Resistor | R12, R13 | https://www.lcsc.com/product-detail/C17168.html | $0.0004 | $0.0008 |
+| 3 | 22.1kΩ Resistor | R16, R19, R20 | https://www.lcsc.com/product-detail/C43473.html | $0.0003 | $0.0009 |
+| 1 | 47.5kΩ Resistor | R17 | https://www.lcsc.com/product-detail/C325696.html | $0.0005 | $0.0005 |
+| 2 | Tactile Push Button | SW1, SW3 | https://www.lcsc.com/product-detail/C221869.html | $0.0622 | $0.1244 |
+| 1 | ESP32-WROOM-32 Module | U1 | https://www.lcsc.com/product-detail/C701341.html | $0.5616 | $0.5616 |
+| 1 | CP2102N USB-UART | U2 | https://www.lcsc.com/product-detail/C1550553.html | $0.2382 | $0.2382 |
+| 1 | AMS1117-3.3 Voltage Regulator | U3 | https://www.lcsc.com/product-detail/C347222.html | $0.0073 | $0.0073 |
+| 3 | ESD Protection Diode | U6, U7, U8 | https://www.lcsc.com/product-detail/C7433850.html | $0.0024 | $0.0072 |
+| 2 | RGB LED | U9, U10 | https://www.lcsc.com/product-detail/C6679547.html | $0.1201 | $0.2402 |
+| 2 | Crystal Oscillator | U11, U12 | https://www.lcsc.com/product-detail/C5243697.html | — | — |
+| 1 | USB Type-C Connector | USB1 | https://www.lcsc.com/product-detail/C136000.html | $0.0731 | $0.0731 |
+| **—** | **Total Component Cost (priced items only)** | **—** | **—** | **—** | **≈ $1.3867 USD** |
+
+> **Note:** Components with **—** do not have a listed JLCPCB/LCSC price and are **not included** in the total cost. PCB fabrication, assembly, and shipping costs are also excluded.
+```
 
 ---
 
