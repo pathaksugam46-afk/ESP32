@@ -81,9 +81,7 @@ Building this PCB taught me a lot about schematic design, PCB routing, component
 | **—** | **Total Component Cost (priced items only)** | **—** | **—** | **—** | **≈ $1.3867 USD** |
 
 > **Note:** Components with **—** do not have a listed JLCPCB/LCSC price and are **not included** in the total cost. PCB fabrication, assembly, and shipping costs are also excluded.
-```
 
----
 
 # Manufacturing Cost
 
